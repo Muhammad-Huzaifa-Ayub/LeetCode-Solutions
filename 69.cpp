@@ -32,6 +32,7 @@ int mySqrt(int x)
 {
     int i = 1;
     
+    
     for ( ; i <= x / 2; i++ )
     {
         if ( i * i == x )

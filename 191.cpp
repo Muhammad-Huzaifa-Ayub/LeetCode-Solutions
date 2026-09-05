@@ -34,7 +34,7 @@ The input binary string 1111111111111111111111111111101 has a total of thirty se
 
 Constraints:
 
-1 <= n <= 231 - 1
+1 <= n <= 2^31 - 1
 
 Follow up: If this function is called many times, how would you optimize it?
 
@@ -48,20 +48,20 @@ int hammingWeight(int num)
 {
     string binary;
 
-    if (num == 0)
+    if ( num == 0 )
     {
         binary = "0";
     }
 
-    while (num > 0)
+    while ( num > 0 )
     {
-        binary = to_string(num % 2) + binary;
+        binary = to_string( num % 2 ) + binary;
         num = num / 2;
     }
 
     int count = 0;
     int i = 0;
-    while ( binary[i] != '\0')
+    while ( binary[i] != '\0' )
     {
         if ( binary[i] == '1' )
         {
